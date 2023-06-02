@@ -1,15 +1,14 @@
 var throttle = require('lodash.throttle');
 
 const form = document.querySelector('.feedback-form');
-// console.log(form);
+
 let email = document.getElementsByName('email')[0];
-// console.log(email);
+
 let message = document.getElementsByName('message')[0];
-// console.log(message);
+
 
 form.addEventListener('input', event => {
-  // localStorage.setItem('email', email.value);
-  // localStorage.setItem('message', message.value);
+
   const emailAndMessage = { email: email.value, message: message.value };
   localStorage.setItem('feedback-form-state', JSON.stringify(emailAndMessage));
 });
